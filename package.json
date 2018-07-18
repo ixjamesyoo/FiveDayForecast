@@ -6,7 +6,6 @@
   "author": "Leon Thorne <ldthorne96@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@zeit/next-css": "^0.2.0",
     "next": "^4.2.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
