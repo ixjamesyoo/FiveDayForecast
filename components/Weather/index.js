@@ -35,12 +35,19 @@ export default class Weather extends Component {
           <button>Go!</button>
         </form>
         <style jsx>{`
-          form {
-            box-sizing:border-box;
+
+          main {
             width: 100%;
             height: 100vh;
             background: #cc5933;
-            color: #fff;
+            display: flex;
+          }
+
+          form {
+            margin: auto;
+            width: 90%;
+            box-sizing:border-box;
+            color: #f2f2f2;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -55,14 +62,22 @@ export default class Weather extends Component {
 
           p {
             font-family: Apercu;
-            font-size: 17px;
+            font-size: 16px;
             margin-bottom: 20px;
           }
 
           input {
-            border: 2px solid #fff;
-            width: 60%;
+            border: 2px solid #f2f2f2;
+            width: 500px;
             height: 50px;
+            padding-left: 20px;
+            color: #f2f2f2;
+            font-family: Apercu;
+            font-size: 22px;
+          }
+
+          input::placeholder {
+            color: rgba(192,192,192,0.4);
           }
         `}</style>
       </main>
