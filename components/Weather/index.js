@@ -12,6 +12,7 @@ export default class Weather extends Component {
 
   fetchForecast(e) {
     e.preventDefault();
+    alert("button works!")
   }
 
   updateField(field) {
@@ -25,25 +26,43 @@ export default class Weather extends Component {
       <main>
         <form onSubmit={this.fetchForecast}>
           <h1>Awesome Weather App</h1>
+          <p>A simply awesome app for simple weather needs. Get your five day forecast.</p>
           <input type="text"
             pattern="[0-9]{5}"
             value={this.state.zipcode}
             placeholder="Quick! Give me your 5-digit zipcode."
             onChange={this.updateField("zipcode")}/>
-          <input type="submit"/>
+          <button>Go!</button>
         </form>
-        <div>
-
-        </div>
         <style jsx>{`
           form {
+            box-sizing:border-box;
             width: 100%;
             height: 100vh;
-            background: grey;
+            background: #cc5933;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 15px;
           }
 
           h1 {
-            color: black;
+            font-family: Tiempos;
+            font-size: 35px;
+            margin-bottom: 10px;
+          }
+
+          p {
+            font-family: Apercu;
+            font-size: 17px;
+            margin-bottom: 20px;
+          }
+
+          input {
+            border: 2px solid #fff;
+            width: 60%;
+            height: 50px;
           }
         `}</style>
       </main>
