@@ -1,4 +1,9 @@
 import { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faLongArrowAltDown } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faLongArrowAltDown);
 
 export default class Weather extends Component {
   constructor(props) {
@@ -12,7 +17,7 @@ export default class Weather extends Component {
 
   fetchForecast(e) {
     e.preventDefault();
-    alert("button works!")
+    alert("button works!");
   }
 
   updateField(field) {
@@ -32,7 +37,7 @@ export default class Weather extends Component {
             value={this.state.zipcode}
             placeholder="Quick! Give me your 5-digit zipcode."
             onChange={this.updateField("zipcode")}/>
-          <button>Go!</button>
+          <button><FontAwesomeIcon icon="long-arrow-alt-down" size="3x"/></button>
         </form>
         <style jsx>{`
 
@@ -78,6 +83,11 @@ export default class Weather extends Component {
 
           input::placeholder {
             color: rgba(192,192,192,0.4);
+          }
+
+          button {
+            color: #f2f2f2;
+            margin-top: 15px;
           }
         `}</style>
       </main>
