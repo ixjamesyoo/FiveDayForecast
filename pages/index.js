@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import Head from 'next/head';
-import Weather from '../components/Weather';
+import Weather from '../components/Weather/weather';
 
 export default class Page extends Component {
   async getInitialProps() {

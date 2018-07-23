@@ -9,6 +9,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.1",
     "@fortawesome/free-solid-svg-icons": "^5.1.1",
     "@fortawesome/react-fontawesome": "^0.1.0",
+    "moment": "^2.22.2",
     "next": "^6.1.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
