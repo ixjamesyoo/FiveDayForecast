@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import Form from "../ZipcodeForm/form";
+import Results from "../Results/results";
 
 export default class Weather extends Component {
   constructor(props) {
@@ -17,8 +18,9 @@ export default class Weather extends Component {
     alert("button works!");
     this.setState({ loading: true })
     let response = await fetch("http://api.openweathermap.org/data/2.5/forecast?zip=11377,us&units=imperial&APPID=44f4535725b6a9b8503b5fd0c49526a6")
-    let forecast = response.json();
-    this.setState({ forecast });
+    let forecast = await response.json();
+    console.log(forecast.list);
+    this.setState({ forecast: forecast.list, loading: false });
   }
 
   updateField(field) {
@@ -34,6 +36,7 @@ export default class Weather extends Component {
         loading={this.state.loading}
         updateZipcode={this.updateField("zipcode")}
         fetchForecast={this.fetchForecast}/>
+        <Results forecast={this.state.forecast}/>
       </main>
     );
   }

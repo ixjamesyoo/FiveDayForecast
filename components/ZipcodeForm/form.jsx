@@ -10,20 +10,18 @@ export default ({ zipcode, updateZipcode, fetchForecast, loading}) => {
   const loadingUI = loading ? <Spinner/> : null;
 
   return (
-    <Fragment>
-      <form onSubmit={fetchForecast}>
-        <h1>Awesome Weather App</h1>
-        <p>A simply awesome app for simple weather needs. Get your five day forecast.</p>
-        <div>
-          <input type="text"
-            pattern="[0-9]{5}"
-            value={zipcode}
-            placeholder="Quick! Give me your 5-digit zipcode."
-            onChange={updateZipcode}/>
-          {loadingUI}
-        </div>
-        <button><FontAwesomeIcon icon="long-arrow-alt-down" size="3x"/></button>
-      </form>
+    <form onSubmit={fetchForecast}>
+      <h1>Awesome Weather App</h1>
+      <p>A simply awesome app for simple weather needs. Get your five day forecast.</p>
+      <div>
+        <input type="text"
+          pattern="[0-9]{5}"
+          value={zipcode}
+          placeholder="Quick! Give me your 5-digit zipcode."
+          onChange={updateZipcode}/>
+        {loadingUI}
+      </div>
+      <button><FontAwesomeIcon icon="long-arrow-alt-down" size="3x"/></button>
       <style jsx>{`
         form {
           width: 100%;
@@ -72,6 +70,6 @@ export default ({ zipcode, updateZipcode, fetchForecast, loading}) => {
           display: flex;
         }
       `}</style>
-    </Fragment>
+    </form>
   );
 };
