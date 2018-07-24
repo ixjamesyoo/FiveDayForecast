@@ -3,11 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faLongArrowAltDown } from '@fortawesome/free-solid-svg-icons';
 import Spinner from "../Spinner/spinner";
+import ErrorMessage from "../Error/error_message";
 
 library.add(faLongArrowAltDown);
 
-export default ({ zipcode, updateZipcode, fetchForecast, loading}) => {
+export default ({ zipcode, updateZipcode, fetchForecast, loading, error}) => {
   const loadingUI = loading ? <Spinner/> : null;
+  const errorMessage = error ? <ErrorMessage/> : null;
 
   return (
     <form onSubmit={fetchForecast}>
@@ -20,6 +22,7 @@ export default ({ zipcode, updateZipcode, fetchForecast, loading}) => {
           placeholder="Quick! Give me your 5-digit zipcode."
           onChange={updateZipcode}/>
         {loadingUI}
+        {errorMessage}
       </div>
       <button><FontAwesomeIcon icon="long-arrow-alt-down" size="3x"/></button>
       <style jsx>{`

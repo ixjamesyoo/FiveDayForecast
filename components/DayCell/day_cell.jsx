@@ -7,9 +7,8 @@ export default ({ dayName, dayForecast }) => {
 
   return (
     <div>
-      <div>{dayName}</div>
-      <div>{Math.round(averageTemp)}</div>
+      <h3>{dayName}</h3>
+      <p>{Math.round(averageTemp)}</p>
     </div>
-
   );
 };
