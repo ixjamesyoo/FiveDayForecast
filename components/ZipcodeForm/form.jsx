@@ -75,6 +75,10 @@ export default ({ zipcode, updateZipcode, fetchForecast, loading, error}) => {
         }
 
         @media screen and (max-width: 992px) {
+          div {
+            display: block;
+          }
+          
           h1 {
             font-size: 5vh;
           }

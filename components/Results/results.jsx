@@ -6,7 +6,7 @@ export default class Results extends Component {
   componentDidUpdate(prevProps) {
     if (this.props.forecast !== prevProps.forecast) {
       const results = document.getElementById("results");
-      this.smoothScrollTo(results.offsetTop, 800);
+      this.smoothScrollTo(results.offsetTop, 750);
     }
   }
 

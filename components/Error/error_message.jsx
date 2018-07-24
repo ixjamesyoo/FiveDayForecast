@@ -11,6 +11,10 @@ export default () => {
         color: #990000;
         display: flex;
         align-items: center;
+
+        @media screen and (max-width: 992px) {
+          margin: 6px 0;
+        }
       `}</style>
   </div>
   );
