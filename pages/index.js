@@ -12,6 +12,7 @@ export default class Page extends Component {
       <div>
         <Head>
           <title>James Yoo Take-home Project</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1"/>
         </Head>
         <Weather/>
         <style jsx global>{`
@@ -51,26 +52,14 @@ export default class Page extends Component {
             list-style: none;
           }
 
-          img {
-            display: block;
-            width: 100%;
-            height: auto;
-          }
-
-          input[type="password"],
-          input[type="email"],
           input[type="text"],
           input[type="submit"],
           textarea,
           button {
+            -ms-appearance: none;
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
-          }
-
-          select {
-            -webkit-appearance: none;
-            -webkit-border-radius: 0px;
           }
 
           button,
@@ -82,6 +71,13 @@ export default class Page extends Component {
               content: "";
               clear: both;
               display: table;
+          }
+
+          @-ms-viewport,
+          @-moz-viewport,
+          @-webkit-viewport {
+            width: device-width ;
+            zoom: 1.0 ;
           }
         `}</style>
       </div>

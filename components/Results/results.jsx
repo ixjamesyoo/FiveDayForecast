@@ -6,19 +6,20 @@ export default class Results extends Component {
   componentDidUpdate(prevProps) {
     if (this.props.forecast !== prevProps.forecast) {
       const results = document.getElementById("results");
-      this.smoothScrollTo(document.documentElement, results.offsetTop, 800);
+      this.smoothScrollTo(results.offsetTop, 800);
     }
   }
 
-  smoothScrollTo(element, to, duration) {
+  smoothScrollTo(destination, duration) {
     if (duration <= 0) return;
-    let difference = to - element.scrollTop;
-    let perTick = difference/ duration * 10;
+    const element = document.documentElement;
+    let framesDifference = destination - element.scrollTop;
+    let framesPerTick = framesDifference/duration * 10;
 
     setTimeout(() => {
-      element.scrollTop = element.scrollTop + perTick;
-      if (element.scrollTop === to) return;
-      this.smoothScrollTo(element, to, duration - 10);
+      element.scrollTop = element.scrollTop + framesPerTick;
+      if (element.scrollTop === destination) return;
+      this.smoothScrollTo(destination, duration - 10);
     }, 10);
   }
 
@@ -68,8 +69,19 @@ export default class Results extends Component {
           .grid-container {
             width: 80%;
             margin: auto;
-            display:grid;
+            display: grid;
             grid-template-columns: repeat(${dayCells.length}, ${100/dayCells.length}%);
+          }
+
+          @media screen and (max-width: 992px) {
+            .grid-container {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+              align-items: center;
+            }
           }
         `}</style>
       </section>

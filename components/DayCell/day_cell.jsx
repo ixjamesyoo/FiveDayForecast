@@ -38,6 +38,38 @@ export default ({ dayName, dayForecast }) => {
           font-family: Tiempos;
           font-size: 40px;
         }
+
+        @media screen and (max-width: 992px) {
+          div {
+            height: 15%;
+            flex-direction: row;
+            max-width: none;
+            width: 60%;
+          }
+
+          h3 {
+            width: 50%;
+            height: 100%;
+            padding: 0;
+            border-right: 1px solid #f2f2f2;
+            border-bottom: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          p {
+            padding: 0;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          span {
+            margin-right: 5px;
+          }
+        }
       `}</style>
     </div>
   );

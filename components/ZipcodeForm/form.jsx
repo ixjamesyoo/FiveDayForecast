@@ -73,6 +73,23 @@ export default ({ zipcode, updateZipcode, fetchForecast, loading, error}) => {
         div {
           display: flex;
         }
+
+        @media screen and (max-width: 992px) {
+          h1 {
+            font-size: 5vh;
+          }
+
+          form {
+            padding: 15px;
+          }
+
+          input {
+            width: 90%;
+            max-width: 500px;
+            padding-left: 5px;
+            font-size: 90%;
+          }
+        }
       `}</style>
     </form>
   );
