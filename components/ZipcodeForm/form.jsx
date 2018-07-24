@@ -32,7 +32,7 @@ export default ({ zipcode, updateZipcode, fetchForecast, loading, error}) => {
           color: #f2f2f2;
           background: #cc5933;
           box-sizing: border-box;
-          padding-left: 45px;
+          padding-left: 60px;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -66,6 +66,7 @@ export default ({ zipcode, updateZipcode, fetchForecast, loading, error}) => {
 
         button {
           color: #f2f2f2;
+          width: 30px;
           margin-top: 15px;
         }
 

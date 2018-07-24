@@ -44,7 +44,7 @@ export default class Weather extends Component {
         updateZipcode={this.updateField("zipcode")}
         fetchForecast={this.fetchForecast}
         error={this.state.error}/>
-      <Results forecast={this.state.forecast} error={this.state.error}/>
+        <Results forecast={this.state.forecast} error={this.state.error}/>
       </main>
     );
   }
