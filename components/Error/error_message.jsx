@@ -6,9 +6,8 @@ export default () => {
       Invalid zipcode.
       <style jsx>{`
         margin-left: 20px;
-        font-family: Apercu;
+        font-family: ApercuBold;
         font-size: 22px;
-        font-weight: bold;
         color: #990000;
         display: flex;
         align-items: center;

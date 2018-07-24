@@ -18,22 +18,16 @@ export default class Page extends Component {
           @font-face {
             font-family: "Apercu";
             src: url('/../static/Apercu/apercu_regular_pro.otf') format("opentype");
-            font-weight: normal;
-            font-style: normal;
           }
 
           @font-face {
-            font-family: "Apercu";
+            font-family: "ApercuBold";
             src: url('/../static/Apercu/apercu_bold_pro.otf') format("opentype");
-            font-weight: bold;
-            font-style: normal;
           }
 
           @font-face {
             font-family: "Tiempos";
             src: url('/../static/Tiempos/TiemposHeadline-Semibold.otf') format("opentype");
-            font-weight: bold;
-            font-style: normal;
           }
 
           html, body, header, nav, h1, a,

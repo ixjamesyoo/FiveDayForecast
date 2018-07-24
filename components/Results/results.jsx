@@ -22,8 +22,7 @@ export default ({ forecast, error }) => {
   const dayCells = dayForecasts.map((dayForecast, idx) => {
     const dayName = moment(dayForecast[0].dt_txt).format("dddd");
     return <DayCell key={idx} dayName={dayName} dayForecast={dayForecast}/>;
-  }
-  );
+  });
 
   return (
     <section>
